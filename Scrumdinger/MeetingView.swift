@@ -23,11 +23,25 @@ struct MeetingView: View {
                     
                 }
             }
+            
+//            .border(Color.red, width: 2)
+            
+            .accessibilityElement(children: /*@START_MENU_TOKEN@*/.ignore/*@END_MENU_TOKEN@*/)
+            .accessibilityLabel("Time Remaining")
+            .accessibilityValue("10 minutes")
             Circle().strokeBorder(lineWidth: 24)
             HStack {
                 Text("Speaker 1 of 3")
+                Spacer()
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Image(systemName: "forward.fill")
+                })
+//                .accessibilityElement(children: /*@START_MENU_TOKEN@*/.ignore/*@END_MENU_TOKEN@*/)
+                .accessibilityLabel("Next Speaker")
             }
         }
+        .padding()
+       
     }
     
 }
